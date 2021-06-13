@@ -1,12 +1,10 @@
-package com.shoppinger.admin.user.user;
+package com.shoppinger.admin.user.user.export;
 
 import com.lowagie.text.*;
 import com.lowagie.text.Font;
 import com.lowagie.text.pdf.PdfPCell;
 import com.lowagie.text.pdf.PdfPTable;
-import com.lowagie.text.pdf.PdfTable;
 import com.lowagie.text.pdf.PdfWriter;
-import com.shoppinger.admin.user.AbstractExporter;
 import com.shoppinger.common.entity.User;
 
 import javax.servlet.http.HttpServletResponse;

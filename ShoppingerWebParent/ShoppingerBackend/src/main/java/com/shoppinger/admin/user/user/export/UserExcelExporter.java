@@ -1,6 +1,5 @@
-package com.shoppinger.admin.user.user;
+package com.shoppinger.admin.user.user.export;
 
-import com.shoppinger.admin.user.AbstractExporter;
 import com.shoppinger.common.entity.User;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.xssf.usermodel.*;

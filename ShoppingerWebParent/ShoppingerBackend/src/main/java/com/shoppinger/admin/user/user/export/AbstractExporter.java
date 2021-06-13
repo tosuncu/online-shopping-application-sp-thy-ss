@@ -1,4 +1,4 @@
-package com.shoppinger.admin.user;
+package com.shoppinger.admin.user.user.export;
 
 import com.shoppinger.common.entity.User;
 

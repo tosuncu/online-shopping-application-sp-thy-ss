@@ -1,6 +1,11 @@
-package com.shoppinger.admin.user.user;
+package com.shoppinger.admin.user.user.controller;
 
 import com.shoppinger.admin.user.FileUploadUtil;
+import com.shoppinger.admin.user.user.UserNotFoundException;
+import com.shoppinger.admin.user.user.UserService;
+import com.shoppinger.admin.user.user.export.UserCsvExporter;
+import com.shoppinger.admin.user.user.export.UserExcelExporter;
+import com.shoppinger.admin.user.user.export.UserPdfExporter;
 import com.shoppinger.common.entity.Role;
 import com.shoppinger.common.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,7 +62,7 @@ public class UserController {
         model.addAttribute("sortDir", sortDir);
         model.addAttribute("reverseSortDir", reverseSortDir);
         model.addAttribute("keyword", keyword);
-        return "users";
+        return "users/users";
     }
 
     @GetMapping("/users/new")
@@ -68,7 +73,7 @@ public class UserController {
         model.addAttribute("user", user);
         model.addAttribute("roleList", roleList);
         model.addAttribute("pageTitle", "Create New User");
-        return "user_form";
+        return "users/user_form";
     }
 
     @PostMapping("/users/save")
@@ -104,7 +109,7 @@ public class UserController {
             model.addAttribute("user", user);
             model.addAttribute("pageTitle", "Edit User (ID: " + id + ")");
             model.addAttribute("roleList", roleList);
-            return "user_form";
+            return "users/user_form";
         } catch (UserNotFoundException ex) {
             redirectAttributes.addFlashAttribute("message", ex.getMessage());
             return "redirect:/users";

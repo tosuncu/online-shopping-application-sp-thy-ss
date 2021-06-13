@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -29,7 +30,9 @@ public class UserService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-
+    public User getUserByEmail (String email) {
+        return userRepository.getUserByEmail(email);
+    }
     public List<User> listAll() {
         return (List<User>) userRepository.findAll(Sort.by("firstName").ascending());
     }
@@ -66,6 +69,22 @@ public class UserService {
        return userRepository.save(user);
     }
 
+    public User updateAccount (User userInForm) {
+      User userInDb =  userRepository.findById(userInForm.getId()).get();
+
+      if(!userInForm.getPassword().isEmpty()) {
+          userInDb.setPassword(userInForm.getPassword());
+          encodePassword(userInDb);
+      }
+      if (userInForm.getPhotos() != null) {
+          userInDb.setPhotos(userInForm.getPhotos());
+      }
+      userInDb.setFirstName(userInForm.getFirstName());
+      userInDb.setLastName(userInForm.getLastName());
+
+      return userRepository.save(userInDb);
+
+    }
     private void encodePassword(User user) {
         String encodedPassword = passwordEncoder.encode(user.getPassword());
         user.setPassword(encodedPassword);

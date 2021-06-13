@@ -1,6 +1,5 @@
-package com.shoppinger.admin.user.user;
+package com.shoppinger.admin.user.user.export;
 
-import com.shoppinger.admin.user.AbstractExporter;
 import com.shoppinger.common.entity.User;
 import org.supercsv.io.CsvBeanWriter;
 import org.supercsv.io.ICsvBeanWriter;
@@ -8,9 +7,6 @@ import org.supercsv.prefs.CsvPreference;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 public class UserCsvExporter extends AbstractExporter {
