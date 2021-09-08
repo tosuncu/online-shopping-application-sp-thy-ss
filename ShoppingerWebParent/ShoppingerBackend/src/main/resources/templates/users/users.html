@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments :: page_head('Users Shoppinger Admin')">
+<head th:replace="fragments :: page_head('Users Shoppinger Admin','none')">
 
 <body>
 <div class="container-fluid">
@@ -15,24 +15,7 @@
         &nbsp;  &nbsp;
         <a th:href="@{users/export/pdf}" class="fas fa-file-pdf fa-2x icon-red mr-2"></a>
     </div>
-    <div th:if="${message != null}" class="alert alert-success text-center"> [[${message}]]</div>
-    <div>
-        <form th:action="@{/users/page/1}" class="form-inline m-3">
-            <input type="hidden" name="sortField" th:value="${sortField}">
-            <input type="hidden" name="sortDir" th:value="${sortDir}">
-            <label>Filter:  </label> &nbsp;
-            <input type="search" name="keyword" th:value="${keyword}" class="form-control" required/>
-            &nbsp;&nbsp;
-            <button type="submit" value="search" class="btn btn-secondary">
-                <i class="fas fa-search  icon-white"></i>
-            </button>
-            &nbsp;&nbsp;
-            <button type="button" value="Clear" onclick="clearFilter()" class="btn btn-secondary">
-                <i class="fas fa-eraser  icon-white"></i>
-            </button>
-
-        </form>
-    </div>
+<div th:replace="fragments :: search_form_and_message"/>
 
     <div class="full-details">
         <table class="table table-bordered table-striped table-hover table-responsive-xl">
@@ -65,19 +48,11 @@
                 <td class="hideable-column">[[${user.email}]]</td>
                 <td>[[${user.roles}]]</td>
                 <td>
-                    <a th:if="${user.enabled == true}" class="fas fa-check-circle fa-2x icon-green"
-                       th:href="@{'/users/'+ ${user.id} + '/enabled/false'}"
-                       title="Disable this user"></a>
-                    <a th:if="${user.enabled == false}" class="fas fa-circle fa-2x icon-silver"
-                       th:href="@{'/users/'+ ${user.id} + '/enabled/true'}"
-                       title="Enable this user"></a>
-                </td>
+                    <div th:replace="fragments :: status(${user.enabled},'user','/users/'+ ${user.id})"></div>
                 <td>
-                    <a class="fas fa-edit fa-2x icon-blue" th:href="@{'/users/edit/'+${user.id}}"
-                       title="Edit this user"></a>
-                    &nbsp;
-                    <a class="fas fa-trash fa-2x icon-red link-delete" th:href="@{'/users/delete/'+${user.id}}"
-                       th:userId="${user.id}" title="Delete this user"></a>
+                <div th:replace="fragments :: edit('user','/users/edit/'+${user.id})"></div>
+                &nbsp;&nbsp;
+                <div th:replace="fragments :: delete('user',${user.id},'/users/delete/'+${user.id},true)"></div>
                 </td>
             </tr>
             </tbody>
@@ -103,42 +78,16 @@
                        th:href="@{'/users/'+ ${user.id} + '/enabled/true'}"
                        title="Enable this user"></a>
                     &nbsp;
-                    <a class="fas fa-edit fa-2x icon-blue" th:href="@{'/users/edit/'+${user.id}}"
-                       title="Edit this user"></a>
+                    <div th:replace="fragments :: edit('user','/users/edit/'+${user.id})"></div>
                     &nbsp;&nbsp;
-                    <a class="fas fa-trash fa-2x icon-red link-delete" th:href="@{'/users/delete/'+${user.id}}"
-                       th:userId="${user.id}" title="Delete this user"></a>
+                    <div th:replace="fragments :: delete('user',${user.id},'/users/delete/'+${user.id},true)"></div>
                 </div>
             </div>
             <div>&nbsp;</div>
         </div>
     </div>
 
-    <div class="text-center m-1" th:if="${totalItems > 0}">
-        <span> Showing users # [[${startCount}]] to [[${endCount}]] of [[${totalItems}]]</span>
-    </div>
-    <div class="text-center m-1" th:unless="${totalItems > 0}">
-        <span> No Users found</span>
-    </div>
-
-    <div th:if="${totalPages > 0}">
-        <nav>
-            <ul class="pagination justify-content-center flex-wrap">
-                <li th:class="${currentPage > 1 ? 'page-item' : 'page-item disabled'}"><a th:replace="fragments :: pageLink(1, 'First')"></a>
-                </li>
-                <li th:class="${currentPage > 1 ? 'page-item' : 'page-item disabled'}">
-                    <a th:replace="fragments :: pageLink(${currentPage - 1}, 'Previous')"></a>
-                </li>
-                <li th:class="${currentPage != i ? 'page-item': 'page-item active'}"
-                    th:each="i : ${#numbers.sequence(1, totalPages)}"><a th:replace="fragments :: pageLink(${i}, ${i})"></a>
-                </li>
-                <li th:class="${currentPage < totalPages ? 'page-item' : 'page-item disabled'}"><a th:replace="fragments :: pageLink(${currentPage + 1}, 'Next')"></a>
-                </li>
-                <li th:class="${currentPage < totalPages ? 'page-item' : 'page-item disabled'}"><a th:replace="fragments :: pageLink(${totalPages}, 'Last')"></a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+<div th:replace="fragments :: pagination( 'users')"></div>
 
     <div class="modal fade text-center" id="confirmModal">
         <div class="modal-dialog">

@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Shoppinger Application</title>
-</head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="fragments :: page_head('Shoppinger','none')"/>
 <body>
-<h1>Welcome to Shoppinger </h1>
+<div class="container-fluid">
+  <div th:replace="navigation :: header_menu"></div>
+  <div th:replace="navigation :: search_nav"></div>
+  <div><h1>Welcome to Shoppinger AVM</h1></div>
+  <div class="row">
+    <div class="col-sm-2" th:each="category : ${categoryList}">
+      <div><img th:src="@{${category.imagePath}}" width="80px"/></div>
+      <div>
+        <a th:href="@{'/c/'+${category.alias}}">[[${category.name}]]</a>
+      </div>
+    </div>
+  </div>
+
+  <div th:replace="navigation :: footer_menu"></div>
+</div>
 </body>
 </html>

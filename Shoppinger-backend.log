@@ -1,0 +1,56 @@
+2021-06-13 17:45:34.543  INFO 744 --- [main] c.s.a.user.ShoppingerBackendApplication  : Starting ShoppingerBackendApplication using Java 16.0.1 on DESKTOP-23OV5BR with PID 744 (C:\Users\husey\IdeaProjects\ShoppingerProject\ShoppingerWebParent\ShoppingerBackend\target\classes started by husey in C:\Users\husey\IdeaProjects\ShoppingerProject)
+2021-06-13 17:45:34.548  INFO 744 --- [main] c.s.a.user.ShoppingerBackendApplication  : No active profile set, falling back to default profiles: default
+2021-06-13 17:45:35.405  INFO 744 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-13 17:45:35.480  INFO 744 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 2 JPA repository interfaces.
+2021-06-13 17:45:36.106  INFO 744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2021-06-13 17:45:36.117  INFO 744 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-13 17:45:36.118  INFO 744 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-06-13 17:45:36.305  INFO 744 --- [main] o.a.c.c.C.[.[.[/ShoppingerAdmin]         : Initializing Spring embedded WebApplicationContext
+2021-06-13 17:45:36.306  INFO 744 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1690 ms
+2021-06-13 17:45:36.532  INFO 744 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-13 17:45:36.588  INFO 744 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-06-13 17:45:36.727  INFO 744 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-13 17:45:36.852  INFO 744 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-13 17:45:37.210  INFO 744 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-13 17:45:37.228  INFO 744 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-06-13 17:45:38.021  INFO 744 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-13 17:45:38.034  INFO 744 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-13 17:45:38.117  WARN 744 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-13 17:45:38.761  INFO 744 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/images/**'] with []
+2021-06-13 17:45:38.761  INFO 744 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/js/**'] with []
+2021-06-13 17:45:38.762  INFO 744 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-06-13 17:45:38.805  INFO 744 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@700202fa, org.springframework.security.web.context.SecurityContextPersistenceFilter@57f89680, org.springframework.security.web.header.HeaderWriterFilter@2ab39942, org.springframework.security.web.csrf.CsrfFilter@39c1e7b7, org.springframework.security.web.authentication.logout.LogoutFilter@44a98a23, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@aaa7000, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5d202dc4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35f35c59, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@495f7ca4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@141234df, org.springframework.security.web.session.SessionManagementFilter@de40aa1, org.springframework.security.web.access.ExceptionTranslationFilter@4b5f022f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@57ab4b33]
+2021-06-13 17:45:38.937  INFO 744 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-13 17:45:39.027  INFO 744 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-13 17:45:39.635  INFO 744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path '/ShoppingerAdmin'
+2021-06-13 17:45:39.651  INFO 744 --- [main] c.s.a.user.ShoppingerBackendApplication  : Started ShoppingerBackendApplication in 5.744 seconds (JVM running for 6.768)
+2021-06-13 17:59:12.780  INFO 3016 --- [main] c.s.admin.ShoppingerBackendApplication   : Starting ShoppingerBackendApplication using Java 16.0.1 on DESKTOP-23OV5BR with PID 3016 (C:\Users\husey\IdeaProjects\ShoppingerProject\ShoppingerWebParent\ShoppingerBackend\target\classes started by husey in C:\Users\husey\IdeaProjects\ShoppingerProject)
+2021-06-13 17:59:12.795  INFO 3016 --- [main] c.s.admin.ShoppingerBackendApplication   : No active profile set, falling back to default profiles: default
+2021-06-13 17:59:13.585  INFO 3016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-13 17:59:13.663  INFO 3016 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
+2021-06-13 17:59:14.248  INFO 3016 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2021-06-13 17:59:14.248  INFO 3016 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-13 17:59:14.248  INFO 3016 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-06-13 17:59:14.420  INFO 3016 --- [main] o.a.c.c.C.[.[.[/ShoppingerAdmin]         : Initializing Spring embedded WebApplicationContext
+2021-06-13 17:59:14.420  INFO 3016 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1560 ms
+2021-06-13 17:59:14.639  INFO 3016 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-13 17:59:14.686  INFO 3016 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-06-13 17:59:14.826  INFO 3016 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-13 17:59:14.951  INFO 3016 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-13 17:59:15.295  INFO 3016 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-13 17:59:15.311  INFO 3016 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-06-13 17:59:16.061  INFO 3016 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-13 17:59:16.061  INFO 3016 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-13 17:59:16.139  WARN 3016 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-13 17:59:16.732  INFO 3016 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/images/**'] with []
+2021-06-13 17:59:16.732  INFO 3016 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/js/**'] with []
+2021-06-13 17:59:16.732  INFO 3016 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-06-13 17:59:16.764  INFO 3016 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@69c0bae6, org.springframework.security.web.context.SecurityContextPersistenceFilter@57fc6759, org.springframework.security.web.header.HeaderWriterFilter@4c24c40a, org.springframework.security.web.csrf.CsrfFilter@de40aa1, org.springframework.security.web.authentication.logout.LogoutFilter@6b43b101, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3fb1948c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7aef21bb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@767cc126, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@5d84b088, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@220f6a3c, org.springframework.security.web.session.SessionManagementFilter@3e18e693, org.springframework.security.web.access.ExceptionTranslationFilter@2245ccaa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3370be55]
+2021-06-13 17:59:16.889  INFO 3016 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-13 17:59:16.967  INFO 3016 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-13 17:59:17.504  INFO 3016 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path '/ShoppingerAdmin'
+2021-06-13 17:59:17.520  INFO 3016 --- [main] c.s.admin.ShoppingerBackendApplication   : Started ShoppingerBackendApplication in 5.285 seconds (JVM running for 6.209)
+2021-06-13 18:00:36.458  INFO 3016 --- [http-nio-8181-exec-1] o.a.c.c.C.[.[.[/ShoppingerAdmin]         : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-13 18:00:36.459  INFO 3016 --- [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-13 18:00:36.460  INFO 3016 --- [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-06-13 18:01:23.910 ERROR 3016 --- [http-nio-8181-exec-4] com.shoppinger.admin.FileUploadUtil      : Could not list directoryuser-photos\35

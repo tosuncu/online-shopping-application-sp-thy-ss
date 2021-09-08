@@ -1,0 +1,33 @@
+server:
+  port: 82
+  servlet:
+    context-path: /Shoppinger
+spring:
+  datasource:
+    password: 887569
+    url: jdbc:mysql://localhost:3306/shoppingerdb
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+    show-sql: false
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 1089448082108-2t6f1k68at42ma6nesi7b0fbuo6tdr0l.apps.googleusercontent.com
+            client-secret: 3FcFmEFj1MSM8D3Jngu6vDvF
+            scope:
+            - email
+            - profile
+          facebook:
+            client-id: 272593194703287
+            client-secret: 0585ec0a74a45363cddb23a9dbcc43a1
+            scope:
+              - email
+              - public_profile
